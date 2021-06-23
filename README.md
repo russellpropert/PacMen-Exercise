@@ -4,11 +4,10 @@
 In this exercise, two buttons are displayed on the screen. “Add PacMen” creates PacMen in random positions. “Start Game” sends them off, chomping away. When the packmen reach the edge of the screen, they change direction.
 
 ## How To Run
-This exercise can be run by forking the repository (button in upper left), cloning to your machine, and dragging the index.html file into your browser window. The exercise can also be run [here](https://russellpropert.github.io/MIT-MERN/07week/NextTech_PacMen_Factory_Exercise/index.html).
+This exercise can be run by forking the repository (button in upper left), cloning it to your machine, and dragging the index.html file into your browser window. The exercise can also be run from [here](https://russellpropert.github.io/MIT-MERN/07week/NextTech_PacMen_Factory_Exercise/index.html).
 
 ## Future Improvements
-I may include adding ghosts and, if I’m feeling ambitions, eyes that track the same trajectory as the ghosts’ path.
-
+I may include ghosts and, if I’m feeling ambitions, eyes that track the same trajectory as the ghosts’ path.
 
 ## MIT License
 Copyright (c) 2020 John Williams
