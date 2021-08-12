@@ -10,7 +10,7 @@ This exercise can be run by forking the repository (button in upper left), cloni
 Including ghosts with eyes that track the trajectory of the ghosts’ paths.
 
 ## MIT License
-Copyright (c) 2020 John Williams
+Copyright (c) 2021 Russell Propert
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
