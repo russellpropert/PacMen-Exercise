@@ -7,7 +7,7 @@ In this exercise, two buttons are displayed on the screen. “Add PacMen” crea
 Fork the repository, clone it to your machine, and drag the index.html file into your browser window. The exercise can also be run from [here](https://russellpropert.github.io/pacmen-exercise/index.html).
 
 ## Future Improvements
-Including ghosts with eyes that track the trajectory of the ghosts’ paths.
+Including ghosts with eyes that track the ghosts' trajectories.
 
 ## MIT License
 Copyright (c) 2021 Russell Propert
