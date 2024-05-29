@@ -29,19 +29,19 @@ function makePacMan() {
 
   // Adds image to div id = field
   let field = document.getElementById('field');
-  let newimg = document.createElement('img');
-  newimg.style.position = 'absolute';
-  newimg.src = pacArray[direction][mouth];
-  newimg.width = 100;
-  newimg.height = 100;
-  newimg.style.zIndex = 1;
+  let pacmanImage = document.createElement('img');
+  pacmanImage.style.position = 'absolute';
+  pacmanImage.src = pacArray[direction][mouth];
+  pacmanImage.width = 100;
+  pacmanImage.height = 100;
+  pacmanImage.style.zIndex = 1;
 
   // Sets position
-  newimg.style.top = position.y;
-  newimg.style.left = position.x;
+  pacmanImage.style.top = position.y;
+  pacmanImage.style.left = position.x;
 
   // Adds a new Child image to field
-  field.appendChild(newimg);
+  field.appendChild(pacmanImage);
 
   let distancePerInterval = Math.sqrt(velocity.x ** 2 + velocity.y ** 2);
 
@@ -49,7 +49,7 @@ function makePacMan() {
   return {
     position,
     velocity,
-    newimg,
+    pacmanImage,
     direction,
     distance,
     distancePerInterval,
@@ -59,34 +59,34 @@ function makePacMan() {
 
 function update() {
   // Loops over field array and moves each one and moves image in DOM
-  pacmen.forEach((item) => {
-    checkBorderCollisions(item);
-    item.position.x += item.velocity.x;
-    item.position.y += item.velocity.y;
-    item.distance += item.distancePerInterval;
+  pacmen.forEach((pacman) => {
+    checkBorderCollisions(pacman);
+    pacman.position.x += pacman.velocity.x;
+    pacman.position.y += pacman.velocity.y;
+    pacman.distance += pacman.distancePerInterval;
 
-    item.newimg.style.left = item.position.x;
-    item.newimg.style.top = item.position.y;
+    pacman.pacmanImage.style.left = pacman.position.x;
+    pacman.pacmanImage.style.top = pacman.position.y;
 
-    if (item.distance >= 50) {
-      item.mouth = (item.mouth + 1) % 2;
-      item.distance = 0;
+    if (pacman.distance >= 50) {
+      pacman.mouth = (pacman.mouth + 1) % 2;
+      pacman.distance = 0;
     }
 
-    item.newimg.src = pacArray[item.direction][item.mouth];
+    pacman.pacmanImage.src = pacArray[pacman.direction][pacman.mouth];
 
   });
   setTimeout(update, 20);
 }
 
-function checkBorderCollisions(item) {
+function checkBorderCollisions(pacman) {
   // Detects collision with all walls and makes pacman bounce
-  if (item.position.x + 100 >= window.innerWidth && item.velocity.x > 0 || item.position.x <= 0 && item.velocity.x < 0) {
-    item.velocity.x = item.velocity.x * -1;
-    item.direction = (item.direction + 1) % 2
+  if (pacman.position.x + 100 >= window.innerWidth && pacman.velocity.x > 0 || pacman.position.x <= 0 && pacman.velocity.x < 0) {
+    pacman.velocity.x = pacman.velocity.x * -1;
+    pacman.direction = (pacman.direction + 1) % 2
   }
-  if (item.position.y + 100 >= window.innerHeight && item.velocity.y > 0 || item.position.y <= 94 && item.velocity.y < 0) {
-    item.velocity.y = item.velocity.y * -1;
+  if (pacman.position.y + 100 >= window.innerHeight && pacman.velocity.y > 0 || pacman.position.y <= 94 && pacman.velocity.y < 0) {
+    pacman.velocity.y = pacman.velocity.y * -1;
   }
 
 }
