@@ -1,0 +1,35 @@
+@property --pacman-blue {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgb(23, 0, 170);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.header {
+  position: relative;
+  margin: 0;
+  padding: 15px 0 15px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 2;
+  background-color: black;
+  border-bottom: solid var(--pacman-blue) 3px;
+}
+
+button {
+  margin: 0px 10px 0px;
+  padding: 0;
+  width: 200px;
+  height: 60px;
+  border: solid var(--pacman-blue) 3px;
+  border-radius: 60px;
+  background-color: black;
+  color: white;
+  font-size: 1.5em;
+}

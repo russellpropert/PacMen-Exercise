@@ -1,15 +1,17 @@
 <html>
 
 <head>
-    <title>Pacmen</title>
-    <script src="./pacmen.js"></script>
+  <title>PacMen</title>
+  <link rel="stylesheet" href="./pacmen.css">
+  <script src="./pacmen.js"></script>
 </head>
 
 <body>
-    <div id='game'>
-        <button onclick='makeOne()' style="width: 100; height: 30; color: black">Add PacMan</button>
-        <button onclick='update()' style="width: 100; height: 30; color: black">Start</button>
-    </div>
+  <div class="header">
+    <button onclick="makeOne()">Add PacMan</button>
+    <button onclick="update()">Start</button>
+  </div>
+  <div id="field"></div>
 </body>
 
 </html>
