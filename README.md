@@ -4,7 +4,7 @@
 In this exercise, two buttons are displayed on the screen. “Add PacMen” creates PacMen in random positions. “Start Game” sends them off, chomping away. When the packmen reach the edge of the screen, they change direction.
 
 ## How To Run
-Fork the repository, clone it to your machine, and drag the index.html file into your browser window. The exercise can also be run from [here](https://russellpropert.github.io/pacmen-exercise/index.html).
+Fork the repository, clone it to your machine, and drag the index.html file into your browser window. The exercise can also be run from [here](https://pacmen-exercise.vercel.app/).
 
 ## Future Improvements
 Including ghosts with eyes that track the ghosts' trajectories.
